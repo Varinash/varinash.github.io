@@ -75,20 +75,32 @@
              .runofthe{text-shadow: 1vh 1vh 3vh   rgb(105, 47, 37);}
             
              #fullscreen-text{position: relative;;font-size: 1vw;font-style: normal;font-weight: 400;color: #000000; opacity: 0.7;}
-
+ /* 为图片添加阴影和圆角 */  
+            .image-effect {  
+            box-shadow: 10px 10px 5px 0px rgba(166, 139, 139, 0.75); /* 添加阴影 */  
+            border-radius: 10px; /* 添加圆角 */  
+            transition: all 0.3s ease; /* 添加过渡效果 */  
+        }  
+          
+        /* 鼠标悬停时的特效 */  
+            .image-effect:hover {  
+            transform: scale(1.1); /* 放大图片 */  
+        }  
         </style>  
     </head>  
     <body>  
-        <img id="te" src="te.gif" >
-        <img id="chong" src="chong.gif">
-        <img id="finger" src="finger.gif" >
+        <img id="te" src="te.gif"class="image-effect" >
+        <img id="chong" src="chong.gif"class="image-effect">
+        <img id="finger" src="finger.gif"class="image-effect" >
             <video controls id="myVideo">  
             <source src="1.mp4" type="video/mp4">
             type="video/[mp4]"></video>
-        <div id="chinese">Deconstruct Chinese characters</div>
+         <div id="chinese" onclick="openLink()">Deconstruct Chinese characters</div> 
 
         <div class="runofthe" id="goingto"><span id="wont">Dignity<span class="ow">of</span>words</span> <span id="grow"><br>associat<span
             class="ow">ing</span> </span></div>
+            <div id="goingtobed">Chinese characters, <a href="B.html"><span>
+                class="flippers" id="agar">also</span></a>
         <div id="fullscreen-text">
                  Inspired by "Xu Bing's Book of Heaven", with Chinese characters as the type, the Chinese characters of the side of the reorganization,
                  the creation of more than 4000 "Tianshu characters" shaped like Chinese characters but not readable, based on his works as a prototype,
@@ -304,7 +316,16 @@
                  the creation of more than 4000 "Tianshu characters" shaped like Chinese characters but not readable, based on his works as a prototype,
                  the production of an art interactive website, in different ways to let us better understand and feel the dialogue and
                  communication between Eastern and Western cultures.
-                
                 </div>
+                <script>  
+                    function openLink() {  
+                      // 这里是点击链接后要执行的代码  
+                      // 例如，打开一个新页面  
+                      window.open('A.html', '_blank');  
+                    }  
+                  </script>  
     </body>  
 </html>  
+
+    
+
