@@ -1,0 +1,220 @@
+<!doctype html>  
+<html>  
+    <head>  
+        <meta charset="UTF-8">  
+        <title>First page</title>  
+        <style> 
+        body {background-image: url("grey.png");}
+        #face{position: absolute;
+             font-size: 5px;
+             top: -20vh;
+             left: -170px;
+             width: 130vw;
+             height: auto;
+             z-index: 3;
+             opacity: 100}
+        #grey{position: absolute;
+             z-index: 1;
+             opacity: 100}
+        #line{position: absolute;
+             z-index: 2;
+             opacity: 100;
+             top:-25vh;
+             width: 130vw;
+             height: auto;
+             right: -10vw;}
+        #sky1{position: absolute;
+             z-index: 4;
+             opacity: 100;
+             top: -40vh;
+             left: 450px;
+             cursor:pointer;}   
+        #sky2{position: absolute;
+             z-index: 4;
+             opacity: 100;
+             top: -20vh;
+             right: 400px;}
+        #sky3{position: absolute;
+             z-index: 4;
+             opacity: 100;
+             top: -400px;
+             right: -25px;}
+        #stone1{position: absolute;
+             z-index: 5;
+             opacity: 100;
+             top: -50vh;
+             left: 450px;}
+        #bull{position: absolute;
+             z-index: 5;
+             opacity: 100;
+             top: -20vh;
+             left: -250px;
+             width: 130vw;
+             height: auto;}
+        #stone2{position: absolute;
+             z-index: 5;
+             opacity: 100;
+             top: 25vh;
+             left: -100px;}
+        #stone3{position: absolute;
+             z-index: 5;
+             opacity: 100;
+             top: 50vh;
+             right: 300px;}
+        #stone4{position: absolute;
+             z-index: 5;    
+             opacity: 100;
+             top: -10vh;
+             left: -450px;}
+        #stone{position: absolute;
+             z-index: 5;
+             opacity: 100;
+             top: 10vh;
+             right: 500px;}
+        #build{position: absolute;
+             z-index: 2;
+             opacity: 100;
+             top: 10vh;
+             right: 230px;}
+        #white{position: absolute;
+             z-index: 5;
+             opacity: 100;
+             top: 15vh;
+             left: 120px;}
+        #window{position: absolute;
+             z-index: 2;
+             opacity: 100;  
+             top: -10vh;
+             right:-600px;}
+        #zhuan{position: absolute;
+             z-index: 5;
+             opacity: 100;
+             top: -30vh;
+             left: -300px;}
+        #zhuan1{position: absolute;
+             z-index: 5;
+             opacity: 100;
+             top: 25vh;
+             left: 550px;}
+        
+      
+        #sky1 {
+             display: inline-block;
+             }
+
+            .rotate {
+               animation: rotateAnimation 5s infinite linear;
+             }
+
+            @keyframes rotateAnimation {
+             from {
+             transform: rotate(0deg);
+             }
+             to {
+               transform: rotate(360deg);
+             }
+              }
+     
+        img {
+            position: absolute;
+            opacity: 1;
+            transition: transform 0.5s ease; /* 添加过渡效果 */
+        }
+        #cloud{
+            position: absolute;
+            z-index: 4;
+            opacity: 100;
+            top: 50vh;
+            left: 800px;
+            width: 300px;
+            height: auto;}
+            #clickme {
+          position: absolute;
+          top: 450px;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 40px;
+          cursor: pointer;
+          z-index: 6;
+          }
+          #clickme:hover {
+          color: rgb(227, 73, 193); /* 鼠标悬停时改变文字颜色 */
+          }
+          #AI {
+          position: absolute;
+          top: 15vh;
+          left: 1050px;
+          width: 300px;
+          height: auto;
+          z-index: 5;
+          }
+          #TOU{
+          position: absolute;
+          top: 10vh;
+          left: 750px;
+          width: 300px;
+          height: auto;
+          z-index: 5;}
+        </style>  
+    </head> 
+   
+    <body> 
+        <!-- Your HTML content with image elements -->
+        <a href="third.html" id="clickme">haha！！！Click me</a>
+        <img id="AI" src="2.5D.gif">
+        <img id="face" src="face.png">
+        <img id="line" src="line.png">
+        <img id="grey" src="grey.png">
+        <img id="stone1" src="stone1.png">
+        <img id="stone2" src="stone2.png">
+        <img id="stone3" src="stone3.png">
+        <img id="stone" src="stone.png">
+        <img id="bull" src="bull.png">
+        <img id="stone4" src="stone4.png">
+        <img id="sky2" src="sky2.png" >
+        <img id="build" src="build.png">
+        <img id="sky3" src="sky3.png" >
+        <img id="white" src="white.png">
+        <img id="window" src="window.png">
+        <img id="zhuan" src="zhuan.png">
+        <img id="zhuan1" src="zhuan1.png">
+        <img id="TOU" src="TOU.gif" >
+        <div id="sky1">
+            <img src="sky1.png" alt="Rotating Image">
+          </div>
+<script>
+        var movableImages = ["stone", "stone1", "zhuan", "zhuan1", "white", "window",  "sky2", "build", "sky3"];
+        
+            // Function to move images randomly and continuously
+        function moveContinuously() {
+                movableImages.forEach(function (stone) {
+                    moveRandomly(stone);
+                });
+                // 继续调用moveContinuously函数，实现持续移动
+        setTimeout(moveContinuously, 500); // 控制函数调用频率
+            }
+        
+            // Attach mouse click event listener to the document
+        document.addEventListener("click", function (stone) {
+                moveContinuously(); // Start continuous movement on click
+            });
+        
+            // Function to move images randomly
+        function moveRandomly(elementId) {
+            var element = document.getElementById(elementId);
+            var maxX = window.innerWidth - element.clientWidth; // 使用clientWidth代替offsetWidth
+            var maxY = window.innerHeight - element.clientHeight; // 使用clientHeight代替offsetHeight
+            var randomX = Math.floor(Math.random() * maxX);
+            var randomY = Math.floor(Math.random() * maxY);
+            element.style.transform = "translate(" + randomX + "px," + randomY + "px)";
+            }
+</script>         
+ <script>
+    window.onload = function() {
+    var image = document.getElementById('sky1');
+    image.classList.add('rotate');
+   };
+ </script>
+</html>
+             
+         
