@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Childhood Memories</title>
+    <style>
+        body {
+            background-image: url("caiyun.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #tongxin {
+            width: 140px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */   
+            top: 11px; /* 距离顶部10像素 */
+            right: 120px; /* 距离左侧100像素 */
+            z-index: 0; /* 设置堆叠顺序 */
+        }
+        #xiaowu {
+            width: 130px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */   
+            top: 12px; /* 距离顶部10像素 */
+            right: 10px; /* 距离左侧100像素 */
+            z-index: 0; /* 设置堆叠顺序 */
+        }
+        #xingqiu {
+            width: 75px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */   
+            top: 15px; /* 距离顶部10像素 */
+            right: 30px; /* 距离左侧100像素 */
+            z-index: 1; /* 设置堆叠顺序 */
+        }
+        #bai {
+            width: 130px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 10px; /* 距离顶部10像素 */
+            right: 400px; /* 距离左侧100像素 */
+            z-index: 0; /* 设置堆叠顺序 */
+        }
+        #hei {
+            width: 120px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 12px; /* 距离顶部10像素 */
+            right: 270px; /* 距离左侧100像素 */
+            z-index: 0; /* 设置堆叠顺序 */
+        }
+        #suo {
+            width: 280px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 300px; /* 距离顶部10像素 */
+            left: 230px; /* 距离左侧100像素 */
+            z-index: 1; /* 设置堆叠顺序 */
+        }
+        #tong1 {
+            width: 285px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 300px; /* 距离顶部10像素 */
+            left: 460px; /* 距离左侧100像素 */
+            z-index: 1; /* 设置堆叠顺序 */
+        }
+        #tong2 {
+            width: 285px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 310px; /* 距离顶部10像素 */
+            left: 700px; /* 距离左侧100像素 */
+            z-index: 1; /* 设置堆叠顺序 */
+        }
+        #tong3 {
+            width: 550px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 300px; /* 距离顶部10像素 */
+            right: 180px; /* 距离左侧100像素 */
+            z-index: 1; /* 设置堆叠顺序 */
+        }
+        #xiong {
+            position: absolute;
+            display: none;
+            width: 150px;
+            height: auto;
+            z-index: 2;
+        }
+        .content {
+            text-align: center;
+            z-index: 10;
+        }
+        a {
+        color: rgb(40, 40, 239);
+        text-decoration: none;
+        display: flex;  
+        font-size: 30px;
+        position: fixed;
+        bottom: 300px;
+        right: 600px;
+        width: 300px;
+        z-index: 10;
+        }
+        /* 鼠标悬停时改变链接颜色 */
+        a:hover {
+        color: rgb(235, 93, 152);
+        }
+        #goBack {
+            color: rgb(40, 40, 239);
+            text-decoration: none;
+            display: flex;  
+            font-size: 50px;
+            position: fixed;
+            bottom: 100px;
+            left: 50px;
+            width: 300px;
+            z-index: 10;
+        }
+        /* 鼠标悬停时改变链接颜色 */
+        #goBack:hover {
+            color: rgb(235, 93, 152);
+        }
+        /* 设置链接样式 */
+        #goBack {
+            color: rgb(40, 40, 239);
+            text-decoration: none;
+            display: flex;  
+            font-size: 50px;
+            position: fixed;
+            bottom: 100px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <img src="bai.png" alt="bai" id="bai">
+    <img src="hei.png" alt="hei" id="hei">
+    <img src="tongxin.png" alt="tongxin" id="tongxin">
+    <img src="xiaowu.png" alt="xiaowu" id="xiaowu">
+    <img src="xingqiu.png" alt="xingqiu" id="xingqiu">
+    <img src="suo.png" alt="suo" id="suo">
+    <img src="tong1.png" alt="tong1" id="tong1">
+    <img src="tong2.png" alt="tong2" id="tong2">
+    <img src="tong3.png" alt="tong3" id="tong3">
+    <img src="xiong.png" alt="xiong" id="xiong">
+    <div class="content">
+        <p><a href="index3.html">Go to the vent room</a></p> 
+      </div>
+    <p><a href="index.html" id="goBack">Go Back</a></p> <!-- Added link to go back -->
+    
+    <script>
+         // 获取图片元素
+         var xiongImg = document.getElementById("xiong");
+
+        // 监听鼠标移动事件
+        document.addEventListener("mousemove", function(event) {
+        // 更新图片位置为鼠标的位置
+        xiongImg.style.left = (event.clientX - xiongImg.width / 1) + "px";
+        xiongImg.style.top = (event.clientY - xiongImg.height / 1) + "px";
+    
+        // 显示图片
+        xiongImg.style.display = "block";
+        });
+
+        // 监听鼠标停止移动事件
+        document.addEventListener("mouseout", function(event) {
+        // 隐藏图片
+        xiongImg.style.display = "none";
+        });
+         // Function to go back
+         document.getElementById('goBack').onclick = function() {
+                window.history.back();
+            };
+    </script>
+</body>
+</html>

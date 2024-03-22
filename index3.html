@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Childhood Memories</title>
+    <style>
+        body {
+            background-image: url("beijing.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden; /* Prevent scrollbars */
+        }
+        @keyframes moveQiu {
+            0% { left: -200px; }
+            50% { left: 100px; }
+            100% { left: 300px; }
+        }
+        #qiu {
+            width: 800px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */   
+            top: 60px; /* 距离顶部10像素 */
+            left: 100px; /* 距离左侧100像素 */
+            animation: moveQiu 5s infinite alternate; /* Apply animation */
+            z-index: 2; /* 设置堆叠顺序 */
+        }
+        /* Add animation to qiu2 */
+        @keyframes rotateQiu2 {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        #qiu2 {
+            width: 500px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 40px; /* 距离顶部10像素 */
+            right: 80px; /* 距离左侧100像素 */
+            animation: rotateQiu2 5s linear infinite;
+            z-index: 3; /* 设置堆叠顺序 */
+        }
+        /* Add animation to fangkuai */
+        @keyframes scaleFangkuai {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        #fangkuai {
+            width: 1200px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 60px; /* 距离顶部10像素 */
+            left: 200px; /* 距离左侧100像素 */
+            animation: scaleFangkuai 3s infinite alternate;
+            z-index: 3; /* 设置堆叠顺序 */
+        }
+         /* Add animation to lian */
+         @keyframes moveLian {
+            0% { right: -200px; }
+            50% { right: 50px; }
+            100% { right: 300px; }
+        }
+        #lian {
+            width: 400px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 60px; /* 距离顶部10像素 */
+            right:550px; /* 距离左侧100像素 */
+            animation: moveLian 4s infinite alternate; 
+            z-index: 2; /* 设置堆叠顺序 */
+        }
+         /* Add animation to bu */
+         @keyframes rotateBu {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        #bu {
+            width: 1650px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 10px; /* 距离顶部10像素 */
+            left: 10px; /* 距离左侧100像素 */
+            animation: rotateBu 6s linear infinite;
+            z-index: 1; /* 设置堆叠顺序 */
+        }
+        #xian {
+            width: 1300px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 100px; /* 距离顶部10像素 */
+            left: 300px; /* 距离左侧100像素 */
+            z-index: 4; /* 设置堆叠顺序 */
+        }
+        #kouzi {
+            width: 600px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 100px; /* 距离顶部10像素 */
+            left: 100px; /* 距离左侧100像素 */
+            z-index: 4; /* 设置堆叠顺序 */
+        }
+        #hua {
+            width: 400px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 250px; /* 距离顶部10像素 */
+            right: 40px; /* 距离左侧100像素 */
+            z-index: 4; /* 设置堆叠顺序 */
+        }
+        #ugly {
+            width: 800px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 200px; /* 距离顶部10像素 */
+            left: 150px; /* 距离左侧100像素 */
+            z-index: 0; /* 设置堆叠顺序 */
+        }
+        #bei {
+            width: 500px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 668px; /* 距离顶部10像素 */
+            right: 250px; /* 距离左侧100像素 */
+            z-index: 0; /* 设置堆叠顺序 */
+        }
+        #yanjing {
+            width: 1200px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 100px; /* 距离顶部10像素 */
+            left: 200px; /* 距离左侧100像素 */
+            z-index: 5; /* 设置堆叠顺序 */
+        }
+        #jiantou {
+            width: 200px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */   
+            top: 100px; /* 距离顶部10像素 */
+            left: 600px; /* 距离左侧100像素 */
+            z-index: 5; /* 设置堆叠顺序 */
+        }
+        #goBack {
+            color: rgb(40, 40, 239);
+            text-decoration: none;
+            display: flex;  
+            font-size: 50px;
+            position: fixed;
+            bottom: 100px;
+            left: 50px;
+            width: 300px;
+            z-index: 10;
+        }
+        /* 鼠标悬停时改变链接颜色 */
+        #goBack:hover {
+            color: rgb(235, 93, 152);
+        }
+        /* 设置链接样式 */
+        #goBack {
+            color: rgb(40, 40, 239);
+            text-decoration: none;
+            display: flex;  
+            font-size: 50px;
+            position: fixed;
+            bottom: 100px;
+        }
+        .content {
+            text-align: center;
+            z-index: 10;
+        }
+        a {
+        color: rgb(40, 40, 239);
+        text-decoration: none;
+        display: flex;  
+        font-size: 30px;
+        position: fixed;
+        bottom: 30px;
+        right: 600px;
+        width: 300px;
+        z-index: 10;
+        }
+        /* 鼠标悬停时改变链接颜色 */
+        a:hover {
+        color: rgb(235, 93, 152);
+        }
+    </style>
+</head>
+<body>
+   <img src="qiu.png" alt="qiu" id="qiu">
+   <img src="qiu2.png" alt="qiu2" id="qiu2">
+   <a href="next_page.html"><img src="fangkuai.png" alt="fangkuai" id="fangkuai"></a>
+   <img src="lian.png" alt="lian" id="lian">
+   <img src="bu.png" alt="bu" id="bu">
+   <img src="xian.png" alt="xian" id="xian">
+   <img src="kouzi.png" alt="kouzi" id="kouzi">
+   <img src="hua.png" alt="hua" id="hua">
+   <img src="ugly.png" alt="ugly" id="ugly">
+   <img src="bei.png" alt="bei" id="bei">
+   <img src="yanjing.png" alt="yanjing" id="yanjing">
+   <img src="jiantou.png" alt="jiantou" id="jiantou">
+   <div class="content">
+    <p><a href="index4.html">Emotional storage room</a></p>
+  </div>
+<p><a href="index2.html" id="goBack">Go Back</a></p> <!-- Added link to go back -->
+   <script>
+         // Function to go back
+         document.getElementById('goBack').onclick = function() {
+                window.history.back();
+            };
+   </script>
+</body>

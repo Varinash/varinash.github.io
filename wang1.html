@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Childhood Memories</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("hui.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        img {
+            position: absolute;
+        }
+        #black{
+            /* 调整黑色图像的位置和层叠顺序 */
+            left: 200px; /* 适当调整位置 */
+            top: 50px; /* 适当调整位置 */
+            z-index: 0; /* 设置层叠顺序，低于下一个图像 */
+        }
+        .content {
+            text-align: center;
+            z-index: 15;
+        }
+        a {
+        color: rgb(40, 40, 239);
+        text-decoration: none;
+        display: flex;  
+        font-size: 30px;
+        position: fixed;
+        bottom: 300px;
+        right: 200px;
+        width: 300px;
+        z-index: 15;
+        }
+        /* 鼠标悬停时改变链接颜色 */
+        a:hover {
+        color: rgb(235, 93, 152);
+        }
+
+        
+        #qiu{width: 1600px;
+            height: auto;
+            z-index: 1;
+            top: 40px;
+            right: 60px;
+            position: absolute;
+
+        }
+        .pp {
+            position: absolute;
+            z-index: 15;
+        }
+    </style>
+</head>
+<body>
+    <!-- 图像 -->
+    <img id="qiu" src="2.png">
+    <div class="pp">
+        <img class="moving-image" src="blue.png">
+        <img class="moving-image" src="huang.png">
+        <img class="moving-image" src="pink.png">
+        <img class="moving-image" src="next.png">
+    </div>
+    <div class="content">
+        <p><a href="wang2.html">Click here to go to the next page</a></p>
+      </div>
+    <script>
+        // 获取所有移动的图片元素
+        const movingImages = document.querySelectorAll('.moving-image');
+
+        // 定义移动函数
+        function moveImages() {
+            movingImages.forEach(image => {
+                // 生成随机的左侧和顶部位置
+                const leftPosition = Math.random() * (window.innerWidth - image.width);
+                const topPosition = Math.random() * (window.innerHeight - image.height);
+
+                // 设置图片的样式
+                image.style.left = leftPosition + 'px';
+                image.style.top = topPosition + 'px';
+            });
+        }
+
+        // 添加点击事件监听器，点击任何图像后开始持续移动所有图像
+        movingImages.forEach(image => {
+            image.addEventListener('click', function() {
+                // 调用移动函数
+                moveImages();
+                // 每隔一段时间重新调用移动函数，实现图像的持续随机移动
+                setInterval(moveImages, 500); // 500毫秒为间隔时间
+            });
+        });
+    </script>
+</body>
+</html>
+

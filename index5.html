@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Childhood Memories</title>
+    <style>
+        body {
+            background-image: url("disi.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #red {
+            width: 630px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */   
+            top: 470px; /* 距离顶部10像素 */
+            right: 50px; /* 距离左侧100像素 */
+            z-index: 1; /* 设置堆叠顺序 */
+        }
+        #shu {
+            width: 300px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 20px; /* 距离顶部10像素 */
+            left: 10px; /* 距离左侧100像素 */
+            z-index: 1; /* 设置堆叠顺序 */
+        }
+        #eye {
+            width: 600px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 620px; /* 距离顶部10像素 */
+            left: 50px; /* 距离左侧100像素 */
+            z-index: 1; /* 设置堆叠顺序 */
+        }
+        #three {
+            width: 500px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */   
+            top: 50px; /* 距离顶部10像素 */
+            right: 8px; /* 距离左侧100像素 */
+            z-index: 1; /* 设置堆叠顺序 */
+        }
+        #ban {
+            width: 430px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 550px; /* 距离顶部10像素 */
+            right: 580px; /* 距离左侧100像素 */
+            z-index: 1; /* 设置堆叠顺序 */
+        }
+        #dao {
+            width: 400px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 450px; /* 距离顶部10像素 */
+            right: 780px; /* 距离左侧100像素 */
+            z-index: 4; /* 设置堆叠顺序 */
+        }
+        #wen {
+            width: 330px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 200px; /* 距离顶部10像素 */
+            left: 400px; /* 距离左侧100像素 */
+            z-index: 0; /* 设置堆叠顺序 */
+        }
+        #jian1 {
+            width: 430px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 100px; /* 距离顶部10像素 */
+            right: 600px; /* 距离左侧100像素 */
+            z-index: 3; /* 设置堆叠顺序 */
+        }
+        #caizi {
+            width: 1330px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 40px; /* 距离顶部10像素 */
+            right: 100px; /* 距离左侧100像素 */
+            z-index: 0; /* 设置堆叠顺序 */
+        }
+        .zoomable {
+            transition: transform 0.3s ease;
+        }
+        .zoomable:hover {
+            transform: scale(1.2); /* Adjust the scale factor as needed */
+        }
+        /* Rest of your CSS styles */
+        /* ... */
+        .content {
+            text-align: center;
+            z-index: 10;
+        }
+        a {
+        color: rgb(40, 40, 239);
+        text-decoration: none;
+        display: flex;  
+        font-size: 30px;
+        position: fixed;
+        bottom: 30px;
+        right: 600px;
+        width: 300px;
+        z-index: 10;
+        }
+        /* 鼠标悬停时改变链接颜色 */
+        a:hover {
+        color: rgb(235, 93, 152);
+        }
+        #jiantou {
+            width: 100px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 20px; /* 距离顶部10像素 */
+            right: 100px; /* 距离左侧100像素 */
+            z-index: 5; /* 设置堆叠顺序 */
+        }
+        #shubiao {
+            width: 100px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 500px; /* 距离顶部10像素 */
+            right: 500px; /* 距离左侧100像素 */
+            z-index: 5; /* 设置堆叠顺序 */
+        }
+        #goBack {
+            color: rgb(40, 40, 239);
+            text-decoration: none;
+            display: flex;  
+            font-size: 50px;
+            position: fixed;
+            bottom: 100px;
+            left: 50px;
+            width: 300px;
+            z-index: 10;
+        }
+        /* 鼠标悬停时改变链接颜色 */
+        #goBack:hover {
+            color: rgb(235, 93, 152);
+        }
+        /* 设置链接样式 */
+        #goBack {
+            color: rgb(40, 40, 239);
+            text-decoration: none;
+            display: flex;  
+            font-size: 50px;
+            position: fixed;
+            bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+    <img src="red.png" alt="red" id="red" class="zoomable">
+    <img src="shu.png" alt="shu" id="shu" class="zoomable">
+    <img src="eye.png" alt="eye" id="eye" class="zoomable">
+    <img src="three.png" alt="three" id="three" class="zoomable">
+    <img src="ban.png" alt="ban" id="ban">
+    <img src="dao.png" alt="dao" id="dao">
+    <img src="wen.png" alt="wen" id="wen">
+    <img src="jian1.png" alt="jian1" id="jian1">
+    <img src="caizi.png" alt="caizi" id="caizi">
+    <img src="jiantou.png" alt="jiantou" id="jiantou">
+    <img src="shubiao.png" alt="shubiao" id="shubiao">
+    <div class="content">
+        <p><a href="index6.html">Stuffing cotton!!!</a></p>
+      </div>
+    <p><a href="index4.html" id="goBack">Go Back</a></p> <!-- Added link to go back -->
+    <script>
+        window.onload = function() {
+            // Get all the images
+            var images = document.querySelectorAll('#dao, #jian1');
+
+            // Variables to store mouse position relative to the image
+            var offsetX, offsetY;
+
+            // Loop through each image
+            images.forEach(function(image) {
+                // When mouse is pressed down on an image
+                image.onmousedown = function(event) {
+                    // Calculate the offset between mouse position and image position
+                    offsetX = event.clientX - image.offsetLeft;
+                    offsetY = event.clientY - image.offsetTop;
+
+                    // Make the image draggable by setting its position to absolute
+                    image.style.position = 'absolute';
+
+                    // When the mouse is moved while the button is pressed
+                    document.onmousemove = function(event) {
+                        // Update the image position based on mouse movement
+                        image.style.left = (event.clientX - offsetX) + 'px';
+                        image.style.top = (event.clientY - offsetY) + 'px';
+                    };
+
+                    // When the mouse button is released
+                    image.onmouseup = function() {
+                        // Stop dragging by removing the mousemove event listener
+                        document.onmousemove = null;
+                    };
+                };
+            });
+        };
+         // Function to go back
+         document.getElementById('goBack').onclick = function() {
+                window.history.back();
+            };
+    </script>
+</body>
+</html>

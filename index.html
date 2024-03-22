@@ -1,0 +1,166 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Childhood Memories</title>
+    <style>
+        body {
+            background-image: url("caiyun.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #zhu {
+            width: 130px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 10px; /* 距离顶部10像素 */
+            right: 400px; /* 距离左侧100像素 */
+            z-index: 0; /* 设置堆叠顺序 */
+        }
+        #chou {
+            width: 120px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 12px; /* 距离顶部10像素 */
+            right: 270px; /* 距离左侧100像素 */
+            z-index: 5; /* 设置堆叠顺序 */
+        }
+        #tongxin {
+            width: 140px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */   
+            top: 11px; /* 距离顶部10像素 */
+            right: 120px; /* 距离左侧100像素 */
+            z-index: 5; /* 设置堆叠顺序 */
+        }
+        #xiaowu {
+            width: 130px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */   
+            top: 12px; /* 距离顶部10像素 */
+            right: 10px; /* 距离左侧100像素 */
+            z-index: 0; /* 设置堆叠顺序 */
+        }
+        #xingqiu {
+            width: 75px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */   
+            top: 15px; /* 距离顶部10像素 */
+            right: 30px; /* 距离左侧100像素 */
+            z-index: 1; /* 设置堆叠顺序 */
+        }
+        #ball {
+            width: 1600px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 15px; /* 距离顶部10像素 */
+            right: 50px; /* 距离左侧100像素 */
+            z-index: 2; /* 设置堆叠顺序 */
+        }
+        #qiang {
+            width: 1300px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 140px; /* 距离顶部10像素 */
+            left: 200px; /* 距离左侧100像素 */
+            z-index: 3; /* 设置堆叠顺序 */  
+        }
+        #wupin {
+            width: 1300px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */   
+            top: 135px; /* 距离顶部10像素 */
+            left: 200px; /* 距离左侧100像素 */
+            z-index: 4; /* 设置堆叠顺序 */
+        }
+        #bian {
+            width: 100px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 335px; /* 距离顶部10像素 */
+            left: 550px; /* 距离左侧100像素 */
+            z-index: 5; /* 设置堆叠顺序 */  
+        }
+        #bian2 {
+            width: 150px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */        
+            position:absolute; /* 绝对定位 */
+            top: 400px; /* 距离顶部10像素 */
+            right: 510px; /* 距离左侧100像素 */  
+            z-index: 5; /* 设置堆叠顺序 */
+        }
+        #bian3 {
+            width: 120px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 470px; /* 距离顶部10像素 */
+            left: 370px; /* 距离左侧100像素 */
+            z-index: 5; /* 设置堆叠顺序 */
+        }
+        #bian4 {
+            width: 85px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 170px; /* 距离顶部10像素 */
+            right: 670px; /* 距离左侧100像素 */
+            z-index: 5; /* 设置堆叠顺序 */
+        }
+        img {
+            width: 130px;
+            height: auto;
+            position: absolute;
+            z-index: 0;
+            transition: transform 0.3s ease; /* 添加动画效果 */
+        }
+
+        .hovered {
+            transform: scale(1.5); /* 鼠标悬停时放大图片 */
+            z-index: 1; /* 提高层叠顺序，确保悬停的图片在最上层 */
+        }
+        #zi {
+            width: 900px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 150px; /* 距离顶部10像素 */
+            left: 300px; /* 距离左侧100像素 */
+            z-index: 1; /* 设置堆叠顺序 */
+        }
+    </style>
+</head>
+<body>
+    <img src="zhu.png" alt="zhu" id="zhu">
+    <img src="chou.png" alt="chou" id="chou">
+    <img src="tongxin.png" alt="tongxin" id="tongxin">
+    <img src="xiaowu.png" alt="xiaowu" id="xiaowu">
+    <img src="xingqiu.png" alt="xingqiu" id="xingqiu">
+    <img src="ball.png" alt="ball" id="ball">
+    <img src="qiang.png" alt="qiang" id="qiang">
+    <img src="wupin.png" alt="wupin" id="wupin">
+    <img src="bian.png" alt="bian" id="bian" class="hoverable">
+    <img src="bian2.png" alt="bian2" id="bian2" class="hoverable">
+    <img src="bian3.png" alt="bian3" id="bian3" class="hoverable">
+    <img src="bian4.png" alt="bian4" id="bian4" class="hoverable">
+    <img src="zi.png" alt="zi" id="zi" >
+    <a href="index2.html">
+        <img src="bian.png" alt="bian" id="bian" class="hoverable">
+        <img src="bian2.png" alt="bian2" id="bian2" class="hoverable">
+        <img src="bian3.png" alt="bian3" id="bian3" class="hoverable">
+        <img src="bian4.png" alt="bian4" id="bian4" class="hoverable">
+        <img src="chou.png" alt="chou" id="chou" class="hoverable">
+    </a>
+    <!-- Repeat the same structure for other images -->
+    
+    
+</body>
+<script>
+    const hoverableImages = document.querySelectorAll('.hoverable');
+
+    hoverableImages.forEach(image => {
+        image.addEventListener('mouseenter', () => {
+            // 先移除所有图片的悬停样式
+            hoverableImages.forEach(img => img.classList.remove('hovered'));
+            // 为悬停的图片添加悬停样式
+            image.classList.add('hovered');
+        });
+    });
+</script>
+</html>

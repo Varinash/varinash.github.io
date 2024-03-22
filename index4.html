@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Childhood Memories</title>
+    <style>
+        body {
+            background-image: url("grey.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #cai {
+            width: 930px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */   
+            top: 200px; /* 距离顶部10像素 */
+            right: 500px; /* 距离左侧100像素 */
+            z-index: 0; /* 设置堆叠顺序 */
+        }
+        #pai {
+            width: 318px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */   
+            top: 2px; /* 距离顶部10像素 */
+            right: 2px; /* 距离左侧100像素 */
+            z-index: 0; /* 设置堆叠顺序 */
+        }
+        #squre {
+            width: 400px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 500px; /* 距离顶部10像素 */
+            right: 700px; /* 距离左侧100像素 */
+            z-index: 3; /* 设置堆叠顺序 */
+        }
+        #rainbow {
+            width: 330px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 550px; /* 距离顶部10像素 */
+            left: 10px; /* 距离左侧100像素 */
+            z-index: 0; /* 设置堆叠顺序 */
+        }
+        #xiazai {
+            width: 130px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */   
+            top: 750px; /* 距离顶部10像素 */
+            right: 400px; /* 距离左侧100像素 */
+            z-index: 0; /* 设置堆叠顺序 */
+        }
+        #disixian {
+            width: 1500px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */   
+            top: 390px; /* 距离顶部10像素 */
+            right: 250px; /* 距离左侧100像素 */
+            z-index: 2; /* 设置堆叠顺序 */
+        }
+        #qiuqiu {
+            width: 450px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 300px; /* 距离顶部10像素 */
+            left: 600px; /* 距离左侧100像素 */
+            z-index: 4; /* 设置堆叠顺序 */
+        }
+        #pinkf {
+            width: 1300px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 10px; /* 距离顶部10像素 */
+            right: 340px; /* 距离左侧100像素 */
+            z-index: 3; /* 设置堆叠顺序 */
+        }
+        #qq {
+            width: 130px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 10px; /* 距离顶部10像素 */
+            right: 170px; /* 距离左侧100像素 */
+            z-index: 4; /* 设置堆叠顺序 */
+        }
+        #pink {
+            width: 1530px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: -200px; /* 距离顶部10像素 */
+            left: 1100px; /* 距离左侧100像素 */
+            z-index: 5; /* 设置堆叠顺序 */
+        }
+        #ai {
+            width: 150px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 180px; /* 距离顶部10像素 */
+            right: 9px; /* 距离左侧100像素 */
+            z-index: 6; /* 设置堆叠顺序 */
+        }
+        #one {
+            width: 130px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 350px; /* 距离顶部10像素 */
+            right: 20px; /* 距离左侧100像素 */
+            z-index: 7; /* 设置堆叠顺序 */
+        }
+        #bian4 {
+            width: 130px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 480px; /* 距离顶部10像素 */
+            right: 180px; /* 距离左侧100像素 */
+            z-index: 8; /* 设置堆叠顺序 */
+        }
+        #purple {
+            width: 110px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 800px; /* 距离顶部10像素 */
+            right: 30px; /* 距离左侧100像素 */
+            z-index: 9; /* 设置堆叠顺序 */
+        }
+        #zhuzi {
+            width: 130px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 480px; /* 距离顶部10像素 */
+            right: 10px; /* 距离左侧100像素 */
+            z-index: 10; /* 设置堆叠顺序 */
+        }
+        .content {
+            text-align: center;
+            z-index: 10;
+        }
+        a {
+        color: rgb(40, 40, 239);
+        text-decoration: none;
+        display: flex;  
+        font-size: 30px;
+        position: fixed;
+        bottom: 30px;
+        right: 600px;
+        width: 300px;
+        z-index: 10;
+        }
+        /* 鼠标悬停时改变链接颜色 */
+        a:hover {
+        color: rgb(235, 93, 152);
+        }
+        #goBack {
+            color: rgb(40, 40, 239);
+            text-decoration: none;
+            display: flex;  
+            font-size: 50px;
+            position: fixed;
+            top: 550px;
+            left: 50px;
+            width: 300px;
+            z-index: 10;
+        }
+        /* 鼠标悬停时改变链接颜色 */
+        #goBack:hover {
+            color: rgb(235, 93, 152);
+        }
+        /* 设置链接样式 */
+        #goBack {
+            color: rgb(40, 40, 239);
+            text-decoration: none;
+            display: flex;  
+            font-size: 50px;
+            position: fixed;
+            bottom: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <img src="cai.png" alt="cai" id="cai">
+    <img src="pai.png" alt="pai" id="pai">
+    <img src="squre.png" alt="squre" id="squre">
+    <img src="rainbow.png" alt="rainbow" id="rainbow">
+    <img src="xiazai.png" alt="xiazai" id="xiazai">
+    <img src="disixian.png" alt="disixian" id="disixian">
+    <img src="qiuqiu.png" alt="qiuqiu" id="qiuqiu">
+    <img src="pinkf.png" alt="pinkf" id="pinkf">
+    <img src="ai.png" alt="ai" id="ai">
+    <img src="one.png" alt="one" id="one">
+    <img src="bian4.png" alt="bian4" id="bian4">
+    <img src="purple.png" alt="purple" id="purple">
+    <img src="zhuzi.png" alt="zhuzi" id="zhuzi">
+    <img src="pink.png" alt="pink" id="pink">
+    <img src="qq.png" alt="qq" id="qq">
+    <div class="content">
+        <p><a href="index5.html">Should we try to get rid of it?</a></p>
+      </div>
+    <p><a href="index3.html" id="goBack">Go Back</a></p> <!-- Added link to go back -->
+    <script>
+        window.onload = function() {
+            // Get all the images
+            var images = document.querySelectorAll('img');
+
+            // Variables to store mouse position relative to the image
+            var offsetX, offsetY;
+
+            // Loop through each image
+            images.forEach(function(image) {
+                // When mouse is pressed down on an image
+                image.onmousedown = function(event) {
+                    // Calculate the offset between mouse position and image position
+                    offsetX = event.clientX - image.offsetLeft;
+                    offsetY = event.clientY - image.offsetTop;
+
+                    // Make the image draggable by setting its position to absolute
+                    image.style.position = 'absolute';
+
+                    // When the mouse is moved while the button is pressed
+                    document.onmousemove = function(event) {
+                        // Update the image position based on mouse movement
+                        image.style.left = (event.clientX - offsetX) + 'px';
+                        image.style.top = (event.clientY - offsetY) + 'px';
+                    };
+
+                    // When the mouse button is released
+                    image.onmouseup = function() {
+                        // Stop dragging by removing the mousemove event listener
+                        document.onmousemove = null;
+                    };
+                };
+            });
+        };
+         // Function to go back
+         document.getElementById('goBack').onclick = function() {
+                window.history.back();
+            };
+    </script>
+
+</body>

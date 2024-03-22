@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Childhood Memories</title>
+    <style>
+        body {
+            background-image: url("disi.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #po{width: 630px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */   
+            top: 200px; /* 距离顶部10像素 */
+            left: 50px; /* 距离左侧100像素 */
+            z-index: 1; /* 设置堆叠顺序 */
+        }
+        #mian{width: 850px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 200px; /* 距离顶部10像素 */
+            right: 350px; /* 距离左侧100像素 */
+            z-index: 2; /* 设置堆叠顺序 */
+        }
+        #mian2{width: 830px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 8px; /* 距离顶部10像素 */
+            right: 300px; /* 距离左侧100像素 */
+            z-index: 2; /* 设置堆叠顺序 */
+        }
+        #mian3{width: 1030px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 50px; /* 距离顶部10像素 */
+            left: 550px; /* 距离左侧100像素 */
+            z-index: 1; /* 设置堆叠顺序 */
+        }
+        #mian4{width: 930px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 60px; /* 距离顶部10像素 */
+            left: 380px; /* 距离左侧100像素 */
+            z-index: 1; /* 设置堆叠顺序 */
+        }
+        #huaqiu{width: 330px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 100px; /* 距离顶部10像素 */
+            right: 100px; /* 距离左侧100像素 */
+            z-index: 1; /* 设置堆叠顺序 */
+        }
+        #rainbow{
+            width: 330px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 470px; /* 距离顶部10像素 */
+            right: 50px; /* 距离左侧100像素 */
+            z-index: 5; /* 设置堆叠顺序 */
+        }
+        #niu{
+            width: 530px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 270px; /* 距离顶部10像素 */
+            left: 250px; /* 距离左侧100像素 */
+            z-index: 4; /* 设置堆叠顺序 */
+        }
+        #wuyan{
+            width: 630px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 630px; /* 距离顶部10像素 */
+            right: 50px; /* 距离左侧100像素 */
+            z-index: 3; /* 设置堆叠顺序 */
+        }
+        #xie{
+            width: 630px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 300px; /* 距离顶部10像素 */
+            left: 550px; /* 距离左侧100像素 */
+            z-index: 3; /* 设置堆叠顺序 */
+        }
+        #po:hover{
+            transform: scale(1.2);   
+        }
+        #inputField {
+            position: absolute;
+            top: 100px;
+            left: 50px;
+            width: 500px;
+            height: 100px;
+            font-size: 16px;
+        }
+        .adjustable-button {
+            position: absolute;
+            top: 40px;
+            left: 150px;
+            width: 100px;
+            height: 40px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            /* 添加过渡效果，使按钮在悬停时有一个平滑的颜色变化 */
+            transition: background-color 0.3s ease;
+        }
+
+        .adjustable-button:hover {
+            background-color: #0056b3;
+        }
+        .content {
+            text-align: center;
+            z-index: 10;
+        }
+        a {
+        color: rgb(40, 40, 239);
+        text-decoration: none;
+        display: flex;  
+        font-size: 30px;
+        position: fixed;
+        bottom: 30px;
+        right: 600px;
+        width: 300px;
+        z-index: 10;
+        }
+        /* 鼠标悬停时改变链接颜色 */
+        a:hover {
+        color: rgb(235, 93, 152);
+        }
+        #goBack {
+            color: rgb(40, 40, 239);
+            text-decoration: none;
+            display: flex;  
+            font-size: 50px;
+            position: fixed;
+            bottom: 100px;
+            left: 50px;
+            width: 300px;
+            z-index: 10;
+        }
+        /* 鼠标悬停时改变链接颜色 */
+        #goBack:hover {
+            color: rgb(235, 93, 152);
+        }
+        /* 设置链接样式 */
+        #goBack {
+            color: rgb(40, 40, 239);
+            text-decoration: none;
+            display: flex;  
+            font-size: 50px;
+            position: fixed;
+            bottom: 100px;
+        }
+        
+    </style>
+</head>
+<body>
+    <img src="po.png" alt="po" id="po">
+    <img src="mian.png" alt="mian" id="mian">
+    <img src="mian2.png" alt="mian2" id="mian2">
+    <img src="mian3.png" alt="mian3" id="mian3">
+    <img src="mian4.png" alt="mian4" id="mian4">
+    <img src="huaqiu.png" alt="huaqiu" id="huaqiu">
+    <img src="rainbow.png" alt="rainbow" id="rainbow">
+    <img src="niu.png" alt="niu" id="niu">
+    <img src="wuyan.png" alt="wuyan" id="wuyan">
+    <img src="xie.png" alt="xie" id="xie">
+    <p><a href="index5.html" id="goBack">Go Back</a></p> <!-- Added link to go back -->
+   
+    <input type="text" id="inputField" placeholder="Enter your content here">
+    <button id="saveButton" class="adjustable-button" onclick="saveContent()">Save</button>
+    <!-- Saved content display -->
+    <div id="savedContent"></div>
+    <div class="content">
+        <p><a href="index7.html">Throw it away!!!</a></p>
+      </div>
+    <script>
+         function saveContent() {
+            // 获取输入的内容
+            var inputContent = document.getElementById("inputField").value;
+
+            // 创建一个新的 <p> 元素来显示内容
+            var paragraph = document.createElement("p");
+            paragraph.textContent = inputContent;
+
+            // 找到用于显示保存内容的 <div> 元素
+            var savedContentDiv = document.getElementById("savedContent");
+
+            // 将新的 <p> 元素添加到 <div> 中
+            savedContentDiv.appendChild(paragraph);
+
+            // 清空输入框，以便用户输入新的内容
+            document.getElementById("inputField").value = "";
+        }
+        window.onload = function() {
+            // Get all the images
+            var images = document.querySelectorAll('#niu, #xie, #huaqiu, #mian, #mian2, #mian3, #mian4');
+
+            // Variables to store mouse position relative to the image
+            var offsetX, offsetY;
+
+            // Loop through each image
+            images.forEach(function(image) {
+                // When mouse is pressed down on an image
+                image.onmousedown = function(event) {
+                    // Calculate the offset between mouse position and image position
+                    offsetX = event.clientX - image.offsetLeft;
+                    offsetY = event.clientY - image.offsetTop;
+
+                    // Make the image draggable by setting its position to absolute
+                    image.style.position = 'absolute';
+
+                    // When the mouse is moved while the button is pressed
+                    document.onmousemove = function(event) {
+                        // Update the image position based on mouse movement
+                        image.style.left = (event.clientX - offsetX) + 'px';
+                        image.style.top = (event.clientY - offsetY) + 'px';
+                    };
+
+                    // When the mouse button is released
+                    image.onmouseup = function() {
+                        // Stop dragging by removing the mousemove event listener
+                        document.onmousemove = null;
+                    };
+                };
+            });
+        };
+         // Function to go back
+         document.getElementById('goBack').onclick = function() {
+                window.history.back();
+            };
+    </script>
+</body>
+</html>

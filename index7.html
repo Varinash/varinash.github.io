@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Childhood Memories</title>
+    <style>
+        body {
+            background-image: url("haha.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #xiong {
+            width: 430px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */   
+            top: 200px; /* 距离顶部10像素 */
+            left: 50px; /* 距离左侧100像素 */
+            z-index: 4; /* 设置堆叠顺序 */
+        }
+        #tong {
+            width: 530px; /* 设置图片宽度为10像素 */
+            height:auto; /* 设置图片高度为150像素 */
+            position:absolute; /* 绝对定位 */
+            top: 200px; /* 距离顶部10像素 */
+            right: 50px; /* 距离左侧100像素 */
+            z-index: 2; /* 设置堆叠顺序 */
+        }
+        .content {
+            text-align: center;
+            z-index: 10;
+        }
+        a {
+        color: rgb(40, 40, 239);
+        text-decoration: none;
+        display: flex;  
+        font-size: 50px;
+        position: fixed;
+        bottom: 300px;
+        right: 50px;
+        width: 300px;
+        z-index: 10;
+        }
+        /* 鼠标悬停时改变链接颜色 */
+        a:hover {
+        color: rgb(235, 93, 152);
+        }
+        #goBack {
+            color: rgb(40, 40, 239);
+            text-decoration: none;
+            display: flex;  
+            font-size: 50px;
+            position: fixed;
+            bottom: 100px;
+            left: 50px;
+            width: 300px;
+            z-index: 10;
+        }
+        /* 鼠标悬停时改变链接颜色 */
+        #goBack:hover {
+            color: rgb(235, 93, 152);
+        }
+        /* 设置链接样式 */
+        #goBack {
+            color: rgb(40, 40, 239);
+            text-decoration: none;
+            display: flex;  
+            font-size: 50px;
+            position: fixed;
+            bottom: 100px;
+        }
+       
+           
+   
+    </style>
+</head>
+<body>
+    <img src="xiong.png" alt="xiong" id="xiong">
+    <img src="tong1.png" alt="tong" id="tong">
+    <div class="content">
+        <p><a href="wang1.html">Throw away</a></p>
+    </div>
+    <p><a href="index6.html" id="goBack">Go Back</a></p> <!-- Added link to go back -->
+   
+    <script>
+        window.onload = function() {
+            // Get all the images
+            var images = document.querySelectorAll('#xiong');
+
+            // Variables to store mouse position relative to the image
+            var offsetX, offsetY;
+
+            // Loop through each image
+            images.forEach(function(image) {
+                // When mouse is pressed down on an image
+                image.onmousedown = function(event) {
+                    // Calculate the offset between mouse position and image position
+                    offsetX = event.clientX - image.offsetLeft;
+                    offsetY = event.clientY - image.offsetTop;
+
+                    // Make the image draggable by setting its position to absolute
+                    image.style.position = 'absolute';
+
+                    // When the mouse is moved while the button is pressed
+                    document.onmousemove = function(event) {
+                        // Update the image position based on mouse movement
+                        image.style.left = (event.clientX - offsetX) + 'px';
+                        image.style.top = (event.clientY - offsetY) + 'px';
+                    };
+
+                    // When the mouse button is released
+                    image.onmouseup = function() {
+                        // Stop dragging by removing the mousemove event listener
+                        document.onmousemove = null;
+                    };
+                };
+            });
+        };
+        // Function to go back
+        document.getElementById('goBack').onclick = function() {
+                window.history.back();
+            };
+    </script>
+</body>
+</html>
+    
