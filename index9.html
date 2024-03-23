@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Childhood Memories</title>
+    <style>
+        body {
+            background-image: url("tiankong.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #fang1 {
+            width: 600px;
+            height:auto;
+            position:absolute;
+            top: 400px;
+            left: 15px;
+            z-index: 1;
+        }
+        #fang2 {
+            width: 600px;
+            height:auto;
+            position:absolute;
+            top: 400px;
+            right: 15px;
+            z-index: 1;
+        }
+        #gui {
+            width: 600px;
+            height:auto;
+            position:absolute;
+            top: 700px;
+            left: 270px;
+            z-index: 1;
+        }
+        #bian4 {
+            width: 80px;
+            height:auto;
+            position:absolute;
+            top: 710px;
+            left: 320px;
+            z-index: 1;
+        }
+        #wu15 {
+            width: 100px;
+            height:auto;
+            position:absolute;
+            top: 720px;
+            left: 440px;
+            z-index: 1;
+        }
+        #wu16 {
+            width: 100px;
+            height:auto;
+            position:absolute;
+            top: 700px;
+            left: 600px;
+            z-index: 1;
+        }
+        #wu17 {
+            width: 80px;
+            height:auto;
+            position:absolute;
+            top: 710px;
+            left: 750px;
+            z-index: 1;
+        }   
+        #wu1{
+            width: 1500px;
+            height:auto;
+            position:absolute;
+            top: 30px;
+            right: 100px;
+            z-index: 1;}
+        #wu2{
+            width: 600px;
+            height:auto;
+            position:absolute;
+            top: 30px;
+            left: 520px;
+            z-index: 1;}
+        #wu3{
+            width: 500px;
+            height:auto;
+            position:absolute;
+            top: 180px;
+            right: 600px;
+            z-index: 1;}
+        #wu4{
+            width: 1500px;
+            height:auto;
+            position:absolute;
+            top: 200px;
+            right: 100px;
+            z-index: 1;
+        }
+        #wu5{
+            width: 900px;
+            height:auto;
+            position:absolute;
+            top: 200px;
+            right: 400px;
+            z-index: 1;
+        }
+        #wu6{
+            width: 1200px;
+            height:auto;
+            position:absolute;
+            top: 200px;
+            right: 280px;
+            z-index: 1;
+        }
+        #wu7{
+            width: 550px;
+            height:auto;
+            position:absolute;
+            top: 320px;
+            right: 520px;
+            z-index: 1;
+        }
+        #wu8{
+            width: 700px;
+            height:auto;
+            position:absolute;
+            top: 400px;
+            right: 440px;
+            z-index: 1;
+        }
+        #wu9{
+            width: 700px;
+            height:auto;
+            position:absolute;
+            top: 480px;
+            right: 480px;
+            z-index: 2;
+        }
+        #wu10{
+            width: 1000px;
+            height:auto;
+            position:absolute;
+            top: 400px;
+            right: 300px;
+            z-index: 1;
+        }
+        #wu11{
+            width: 1000px;
+            height:auto;
+            position:absolute;
+            top: 500px;
+            right: 300px;
+            z-index: 1;
+        }
+        #wu12{
+            width: 900px;
+            height:auto;
+            position:absolute;
+            top: 380px;
+            right: 420px;
+            z-index: 1;
+        }
+        #wu13{
+            width: 1200px;
+            height:auto;
+            position:absolute;
+            top: 460px;
+            right: 220px;
+            z-index: 1;
+        }
+        #wu14{
+            width: 1500px;
+            height:auto;
+            position:absolute;
+            top: 380px;
+            right: 30px;
+            z-index: 1;
+        }
+        #varina{
+            width: 600px;
+            height:auto;
+            position:absolute;
+            top: 100px;
+            left: 100px;
+            z-index: 3;
+        }
+        .content {
+            text-align: center;
+            z-index: 15;
+        }
+        a {
+        color: rgb(40, 40, 239);
+        text-decoration: none;
+        display: flex;  
+        font-size: 50px;
+        position: fixed;
+        bottom: 30px;
+        right: 100px;
+        width: 300px;
+        z-index: 10;
+        }
+        /* 鼠标悬停时改变链接颜色 */
+        a:hover {
+        color: rgb(235, 93, 152);
+        }
+        #goBack {
+            color: rgb(40, 40, 239);
+            text-decoration: none;
+            display: flex;  
+            font-size: 50px;
+            position: fixed;
+            top: 550px;
+            left: 50px;
+            width: 300px;
+            z-index: 10;
+        }
+        /* 鼠标悬停时改变链接颜色 */
+        #goBack:hover {
+            color: rgb(235, 93, 152);
+        }
+        /* 设置链接样式 */
+        #goBack {
+            color: rgb(40, 40, 239);
+            text-decoration: none;
+            display: flex;  
+            font-size: 50px;
+            position: fixed;
+            bottom: 100px;
+        }
+     
+    </style>
+</head>
+<body>
+    <img src="fang1.png" alt="fang1" id="fang1">
+    <img src="fang2.png" alt="fang2" id="fang2">
+    <img src="gui.png" alt="gui" id="gui">
+    <img src="bian4.png" alt="bian4" id="bian4">
+    <img src="wu15.png" alt="wu15" id="wu15">
+    <img src="wu16.png" alt="wu16" id="wu16">
+    <img src="wu17.png" alt="wu17" id="wu17">
+    <img src="wu1.png" alt="wu1" id="wu1">
+    <img src="wu2.png" alt="wu2" id="wu2">
+    <img src="wu3.png" alt="wu3" id="wu3">
+    <img src="wu4.png" alt="wu4" id="wu4">
+    <img src="wu5.png" alt="wu5" id="wu5">
+    <img src="wu6.png" alt="wu6" id="wu6">
+    <img src="wu7.png" alt="wu7" id="wu7">
+    <img src="wu8.png" alt="wu8" id="wu8">
+    <img src="wu9.png" alt="wu9" id="wu9">
+    <img src="wu10.png" alt="wu10" id="wu10">
+    <img src="wu11.png" alt="wu11" id="wu11">
+    <img src="wu12.png" alt="wu12" id="wu12">
+    <img src="wu13.png" alt="wu13" id="wu13">
+    <img src="wu14.png" alt="wu14" id="wu14">
+    <img src="varina.png" alt="varina" id="varina">
+    
+    <p><a href="index10.html" id="content">Create a bear profile</a></p>
+      
+    <p><a href="index.html" id="goBack">Back to home page</a></p> <!-- Added link to go back -->
+    <script>
+        window.onload = function() {
+            // Get all the images
+            var images = document.querySelectorAll('img');
+
+            // Variables to store mouse position relative to the image
+            var offsetX, offsetY;
+
+            // Loop through each image
+            images.forEach(function(image) {
+                // When mouse is pressed down on an image
+                image.onmousedown = function(event) {
+                    // Calculate the offset between mouse position and image position
+                    offsetX = event.clientX - image.offsetLeft;
+                    offsetY = event.clientY - image.offsetTop;
+
+                    // Make the image draggable by setting its position to absolute
+                    image.style.position = 'absolute';
+
+                    // When the mouse is moved while the button is pressed
+                    document.onmousemove = function(event) {
+                        // Update the image position based on mouse movement
+                        image.style.left = (event.clientX - offsetX) + 'px';
+                        image.style.top = (event.clientY - offsetY) + 'px';
+                    };
+
+                    // When the mouse button is released
+                    image.onmouseup = function() {
+                        // Stop dragging by removing the mousemove event listener
+                        document.onmousemove = null;
+                    };
+                };
+            });
+        };
+        
+    </script>
+
+</body>
+</html>

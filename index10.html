@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Childhood Memories</title>
+    <style>
+        body {
+            background-image: url("kong.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #dang {
+            width: 800px;
+            height:auto;
+            position:absolute;
+            top: 200px;
+            left: 500px;
+            z-index: 2;
+        }
+        #gai {
+            width: 100px;
+            height:auto;
+            position:absolute;
+            top: 235px;
+            left: 860px;
+            z-index: 4;
+        }
+        #huaxian {
+            width: 1500px;
+            height:auto;
+            position:absolute;
+            top: 200px;
+            left: 15px;
+            z-index: 1;
+        }
+        #jiantou {
+            width: 100px;
+            height:auto;
+            position:absolute;
+            top: 600px;
+            left: 860px;
+            z-index: 5;
+        }
+        #lanhua {
+            width: 500px;
+            height:auto;
+            position:absolute;
+            top: 460px;
+            right: 50px;
+            z-index: 2;
+        }
+        #q{
+            width: 400px;
+            height:auto;
+            position:absolute;
+            top: 10px;
+            left: 15px;
+            z-index: 2;}
+        #shangxiong {
+            width: 100px;
+            height:auto;
+            position:absolute;
+            top: 660px;
+            left: 800px;
+            z-index: 4;
+        }
+        #yundui {
+            width: 300px;
+            height:auto;
+            position:absolute;
+            top: 450px;
+            left: 10px;
+            z-index: 2;
+        }
+        #yunkuai{
+            width: 300px;
+            height:auto;
+            position:absolute;
+            top: 50px;
+            right: 1px;
+            z-index: 2;
+        }
+        #inputField {
+            position: absolute;
+            top: 360px;
+            right: 400px;
+            width: 300px;
+            height: 300px;
+            font-size: 16px;
+            z-index: 10;
+        }
+        .adjustable-button {
+            position: absolute;
+            top: 560px;
+            right: 480px;
+            width: 100px;
+            height: 40px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 16;
+            /* 添加过渡效果，使按钮在悬停时有一个平滑的颜色变化 */
+            transition: background-color 0.3s ease;
+        }
+
+        .adjustable-button:hover {
+            background-color: #0056b3;
+        }
+        #savedContent {
+        position: absolute;
+        top: 350px; /* Adjust this value to move the content vertically */
+        right: 550px; /* Adjust this value to move the content horizontally */
+        /* Add any other styles as needed */
+        z-index: 20;
+        }
+        .content {
+            text-align: center;
+            z-index: 15;
+        }
+        a {
+        color: rgb(40, 40, 239);
+        text-decoration: none;
+        display: flex;  
+        font-size: 30px;
+        position: fixed;
+        top: 120px;
+        right: 450px;
+       
+        z-index: 15;
+        }
+        /* 鼠标悬停时改变链接颜色 */
+        a:hover {
+        color: rgb(235, 93, 152);
+        }
+        #goBack {
+            color: rgb(40, 40, 239);
+            text-decoration: none;
+            display: flex;  
+            font-size: 50px;
+            position: fixed;
+            bottom: 100px;
+            left: 50px;
+            width: 300px;
+            z-index: 15;
+        }
+        /* 鼠标悬停时改变链接颜色 */
+        #goBack:hover {
+            color: rgb(235, 93, 152);
+        }
+        /* 设置链接样式 */
+        #goBack {
+            color: rgb(40, 40, 239);
+            text-decoration: none;
+            display: flex;  
+            font-size: 50px;
+            position: fixed;
+            bottom: 100px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <img src="dang.png" alt="dang" id="dang">
+    <img src="gai.png" alt="gai" id="gai">
+    <img src="huaxian.png" alt="huaxian" id="huaxian">
+    <img src="jiantou.png" alt="jiantou" id="jiantou">
+    <img src="lanhua.png" alt="lanhua" id="lanhua">
+    <img src="q.png" alt="q" id="q">
+    <img src="shangxiong.png" alt="shangxiong" id="shangxiong">
+    <img src="yundui.png" alt="yundui" id="yundui">
+    <img src="yunkuai.png" alt="yunkuai" id="yunkuai">
+    <input type="text" id="inputField" placeholder="Enter your content here">
+    <button id="saveButton" class="adjustable-button" onclick="saveContent()">Save</button>
+    <!-- Saved content display -->
+    <div id="savedContent"></div>
+    <div class="content">
+        <p><a href="wang1.html">Welcome to the website of Childhood Memories</a></p>
+    </div>
+    <p><a href="index9.html" id="goBack">Go Back</a></p> <!-- Added link to go back -->
+    
+    <script>
+        function saveContent() {
+           // 获取输入的内容
+           var inputContent = document.getElementById("inputField").value;
+
+           // 创建一个新的 <p> 元素来显示内容
+           var paragraph = document.createElement("p");
+           paragraph.textContent = inputContent;
+
+           // 找到用于显示保存内容的 <div> 元素
+           var savedContentDiv = document.getElementById("savedContent");
+
+           // 将新的 <p> 元素添加到 <div> 中
+           savedContentDiv.appendChild(paragraph);
+
+           // 清空输入框，以便用户输入新的内容
+           document.getElementById("inputField").value = "";
+       }
+       window.onload = function() {
+           // Get all the images
+           var images = document.querySelectorAll('#niu, #xie, #huaqiu, #mian, #mian2, #mian3, #mian4');
+
+           // Variables to store mouse position relative to the image
+           var offsetX, offsetY;
+
+           // Loop through each image
+           images.forEach(function(image) {
+               // When mouse is pressed down on an image
+               image.onmousedown = function(event) {
+                   // Calculate the offset between mouse position and image position
+                   offsetX = event.clientX - image.offsetLeft;
+                   offsetY = event.clientY - image.offsetTop;
+
+                   // Make the image draggable by setting its position to absolute
+                   image.style.position = 'absolute';
+
+                   // When the mouse is moved while the button is pressed
+                   document.onmousemove = function(event) {
+                       // Update the image position based on mouse movement
+                       image.style.left = (event.clientX - offsetX) + 'px';
+                       image.style.top = (event.clientY - offsetY) + 'px';
+                   };
+
+                   // When the mouse button is released
+                   image.onmouseup = function() {
+                       // Stop dragging by removing the mousemove event listener
+                       document.onmousemove = null;
+                   };
+               };
+           });
+       };
+   </script>
+</body>
+</html>

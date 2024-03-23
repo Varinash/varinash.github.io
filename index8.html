@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Childhood Memories</title>
+    <style>
+        body {
+            background-image: url("huiqiang.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .hoverable {
+            transition: transform 0.3s ease; /* 添加过渡效果 */
+        }
+        .hoverable:hover {
+            transform: scale(1.5) rotate(360deg); /* 鼠标悬停时放大并旋转 */
+        }
+        /* 添加其它样式 */
+        #fenqiu {
+            width: 100px;
+            height:auto;
+            position:absolute;
+            top: 100px;
+            left: 30px;
+            z-index: 1;
+        }
+        #fenqiu2 {
+            width: 130px;
+            height:auto;
+            position:absolute;
+            top: 700px;
+            left: 50px;
+            z-index: 1;
+        }   
+        #fenshe {
+            width: 330px;
+            height:auto;
+            position:absolute;
+            top: 650px;
+            right: 50px;
+            z-index: 4;
+        }   
+        #bing {
+            width: 500px;
+            height:auto;
+            position:absolute;
+            top: 400px;
+            left: 50px;
+            z-index: 2;
+        }
+        #chaise {
+            width: 430px;
+            height:auto;
+            position:absolute;
+            top: 100px;
+            left: 80px;
+            z-index: 1;
+        }
+        #fenkuai {
+            width: 1060px;
+            height:auto;
+            position:absolute;
+            top: 60px;
+            right: 400px;
+            z-index: 1;
+        }
+        #lie{
+            width: 960px;
+            height:auto;
+            position:absolute;
+            top: 40px;
+            left: 400px;
+            z-index: 4;
+        }
+        #xiongkuai{
+            width: 450px;
+            height:auto;
+            position:absolute;
+            top: 350px;
+            right: 300px;
+            z-index: 2;
+        }
+
+        /* 添加旋转动画 */
+        @keyframes rotate360 {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .rotate {
+            animation: rotate360 2s linear infinite;
+        }
+        .content {
+            text-align: center;
+            z-index: 15;
+        }
+        a {
+        color: rgb(40, 40, 239);
+        text-decoration: none;
+        display: flex;  
+        font-size: 40px;
+        position: fixed;
+        bottom: 200px;
+        right: 50px;
+        width: 300px;
+        z-index: 15;
+        }
+        /* 鼠标悬停时改变链接颜色 */
+        a:hover {
+        color: rgb(235, 93, 152);
+        }
+        #goBack {
+            color: rgb(40, 40, 239);
+            text-decoration: none;
+            display: flex;  
+            font-size: 50px;
+            position: fixed;
+            bottom: 100px;
+            left: 50px;
+            width: 300px;
+            z-index: 15;
+        }
+        /* 鼠标悬停时改变链接颜色 */
+        #goBack:hover {
+            color: rgb(235, 93, 152);
+        }
+        /* 设置链接样式 */
+        #goBack {
+            color: rgb(40, 40, 239);
+            text-decoration: none;
+            display: flex;  
+            font-size: 50px;
+            position: fixed;
+            bottom: 100px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 添加hoverable和rotate类 -->
+    <img src="fenqiu.png" alt="fenqiu" id="fenqiu">
+    <img src="fenqiu2.png" alt="fenqiu2" id="fenqiu2">
+    <img src="fenshe.png" alt="fenshe" id="fenshe" class="hoverable rotate">
+    <img src="bing.png" alt="bing" id="bing">
+    <img src="chaise.png" alt="chaise" id="chaise" class="hoverable rotate">
+    <img src="fenkuai.png" alt="fenkuai" id="fenkuai" >
+    <img src="lie.png" alt="lie" id="lie" class="hoverable ">
+    <img src="xiongkuai.png" alt="xiongkuai" id="xiongkuai" class="hoverable rotate">
+    <div class="content">
+        <p><a href="index9.html">Create a bear profile</a></p>
+    </div>
+    <p><a href="index10.html" id="goBack">Create your own house</a></p> <!-- Added link to go back -->
+    
+    
+</body>
+</html>

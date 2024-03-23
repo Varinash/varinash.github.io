@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Childhood Memories</title>
+    <style>
+        body {
+            background-image: url("lv.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #dui {
+            width: 800px;
+            height:auto;
+            position:absolute;
+            top: 400px;
+            left: 20px;
+            z-index: 3;
+        }
+        #landui {
+            width: 400px;
+            height:auto;
+            position:absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+        }
+        #lanqiu {
+            width: 200px;
+            height:auto;
+            position:absolute;
+            top: 420px;
+            right: 30px;
+            z-index: 3;
+        }
+        #lanqiu2 {
+            width: 150px;
+            height:auto;
+            position:absolute;
+            top: 20px;
+            right: 30px;
+            z-index: 4;
+        }
+        #wudui {
+            width: 800px;
+            height:auto;
+            position:absolute;
+            top: 100px;
+            left: 500px;
+            z-index: 1;
+        }
+        .hoverable {
+            transition: transform 0.3s ease; /* 添加过渡效果 */
+        }
+        .hoverable:hover {
+            transform: scale(1.5) rotate(360deg); /* 鼠标悬停时放大并旋转 */
+        }
+        /* 添加其它样式 */
+         /* 添加旋转动画 */
+         @keyframes rotate360 {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .rotate {
+            animation: rotate360 2s linear infinite;
+        }
+    
+        .content {
+            text-align: center;
+            z-index: 15;
+        }
+        a {
+            color: rgb(40, 40, 239);
+        text-decoration: none;
+        display: flex;  
+        font-size: 30px;
+        position: fixed;
+        top: 120px;
+        right: 450px;
+        z-index: 15;
+        }
+        /* 鼠标悬停时改变链接颜色 */
+        a:hover {
+        color: rgb(235, 93, 152);
+        }
+        #goBack {
+            color: rgb(248, 108, 213);
+            text-decoration: none;
+            display: flex;  
+            font-size: 50px;
+            position: fixed;
+            bottom: 100px;
+            left: 50px;
+            width: 300px;
+            z-index: 15;
+        }
+        /* 鼠标悬停时改变链接颜色 */
+        #goBack:hover {
+            color: rgb(62, 237, 228);
+        }
+        /* 设置链接样式 */
+        #goBack {
+            color: rgb(247, 131, 220);
+            text-decoration: none;
+            display: flex;  
+            font-size: 50px;
+            position: fixed;
+            bottom: 100px;
+        }
+        
+    </style>
+</head>
+<body>
+    <img src="dui.png" alt="dui" id="dui" class="hoverable ">
+    <img src="landui.png" alt="landui" id="landui" class="hoverable ">
+    <img src="lanqiu.png" alt="lanqiu" id="lanqiu" class="hoverable ">
+    <img src="lanqiu2.png" alt="lanqiu2" id="lanqiu2" class="hoverable rotate">
+    <img src="wudui.png" alt="wudui" id="wudui" class="hoverable rotate">
+    <div class="content">
+        <p><a href="wang4.html">Welcome to the website of Childhood Memories</a></p>
+    </div>
+    <p><a href="wang2.html" id="goBack">Go Back</a></p> <!-- Added link to go back -->
+</body>
+</html>
+   
